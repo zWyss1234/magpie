@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Magpie – TikTok connection</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main style="text-align:center;padding:48px 16px">
+  <h1>Almost done</h1>
+  <p class="muted">Copy this code and paste it in the terminal: <code>node tiktok-auth.mjs &lt;code&gt;</code></p>
+  <p><code id="code" style="font-size:18px;word-break:break-all"></code></p>
+  <button id="copy" style="font:inherit;padding:10px 18px;border-radius:12px;border:0;background:var(--pink);color:#fff">Copy</button>
+</main>
+<script>
+// Shows the one-time code TikTok sends back. Nothing is stored or sent anywhere.
+const params = new URLSearchParams(location.search);
+const code = params.get("code") || ("Error: " + (params.get("error_description") || params.get("error") || "no code"));
+document.getElementById("code").textContent = code;
+document.getElementById("copy").onclick = () => navigator.clipboard.writeText(code);
+</script>
+</body>
+</html>
