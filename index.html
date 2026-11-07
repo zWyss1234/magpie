@@ -3,50 +3,75 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Magpie – Help</title>
+<title>Magpie – Long distance love</title>
+<meta name="description" content="Magpie is the app for couples who live apart: think of each other, hatch an egg together, draw on each other's home screen, and keep your whole story.">
+<meta property="og:title" content="Magpie – Long distance love">
+<meta property="og:description" content="Feel close, even miles apart. One subscription for both of you.">
+<meta property="og:image" content="https://zwyss1234.github.io/magpie/img/1-home.jpg">
+<link rel="icon" href="icon.png">
 <link rel="stylesheet" href="style.css">
+<style>
+  .hero { text-align: center; padding: 48px 16px 24px; }
+  .hero img.logo { width: 96px; height: 96px; border-radius: 24px; box-shadow: 0 10px 30px rgba(240, 70, 110, .25); }
+  .hero h1 { font-size: clamp(34px, 7vw, 54px); margin: 18px 0 8px; letter-spacing: -0.02em; }
+  .hero p.lead { font-size: 20px; color: var(--muted); max-width: 560px; margin: 0 auto; }
+  .legend { font-style: italic; color: var(--muted); max-width: 520px; margin: 22px auto 0; font-size: 16px; }
+  .stores { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin: 28px 0 6px; }
+  .store { background: var(--text); color: var(--bg); border-radius: 14px; padding: 10px 18px; font-weight: 600; text-decoration: none; min-width: 170px; }
+  .store small { display: block; font-weight: 400; opacity: .7; font-size: 12px; }
+  .shots { display: flex; gap: 14px; overflow-x: auto; padding: 24px 16px; scroll-snap-type: x mandatory; justify-content: safe center; }
+  .shots img { width: 220px; flex: 0 0 auto; border-radius: 28px; box-shadow: 0 12px 30px rgba(0,0,0,.12); scroll-snap-align: center; }
+  .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; margin-top: 10px; }
+  .feature { background: var(--card); border-radius: 18px; padding: 18px; }
+  .feature .emoji { font-size: 28px; }
+  .feature h3 { margin: 8px 0 4px; font-size: 17px; }
+  .feature p { margin: 0; color: var(--muted); font-size: 15px; }
+  .price { text-align: center; margin: 36px 0 8px; }
+  footer { text-align: center; color: var(--muted); font-size: 14px; margin-top: 40px; }
+  footer a { margin: 0 8px; }
+</style>
 </head>
 <body>
 <main>
-<header><img src="icon.png" alt=""><h1>Magpie</h1></header>
-<p class="muted">Your story, from far apart to side by side.</p>
-<nav class="lang"><a href="#en">English</a><a href="#fr">Français</a><a href="#pl">Polski</a><a href="privacy.html">Privacy</a></nav>
+  <section class="hero">
+    <img class="logo" src="icon.png" alt="Magpie">
+    <h1>Feel close, even miles apart.</h1>
+    <p class="lead">Magpie is the app for couples who live apart: different cities, different countries, different time zones.</p>
+    <p class="legend">In an old legend, two lovers are kept apart by the Milky Way. Once a year, magpies build a bridge so they can meet. Magpie is your bridge.</p>
+    <div class="stores">
+      <span class="store">Coming soon<small>on the App Store</small></span>
+      <span class="store">Coming soon<small>on Google Play</small></span>
+    </div>
+    <p class="muted" style="font-size:14px">iPhone and Android, together: link your phones with a 6-letter code.</p>
+  </section>
 
-<section class="card" id="en">
-<h2>Help</h2>
-<h3>How do we link our two phones?</h3>
-<p>One of you opens <em>Settings › Link our phones › Invite</em> and sends the 6-letter code. The other one taps <em>I have a code from my partner</em> on the welcome screen.</p>
-<h3>Do we both need to pay?</h3>
-<p>No. One subscription unlocks Magpie Premium for the couple. Manage or cancel it in your Apple account settings (Settings › your name › Subscriptions).</p>
-<h3>How do I delete my data?</h3>
-<p><em>Settings › Delete my account and data</em> deletes everything, on your phone and on our servers.</p>
-<h3>Contact</h3>
-<p><a href="mailto:magpie.app.contact@gmail.com">magpie.app.contact@gmail.com</a></p>
-</section>
+  <div class="shots">
+    <img src="img/1-home.jpg" alt="Home: distance, their time, countdown and Thinking of you">
+    <img src="img/2-nest.jpg" alt="Your shared egg">
+    <img src="img/3-memories.jpg" alt="Your journal of memories">
+    <img src="img/4-stats.jpg" alt="Your story in numbers">
+  </div>
 
-<section class="card" id="fr">
-<h2>Aide</h2>
-<h3>Comment relier nos deux téléphones ?</h3>
-<p>L'un de vous ouvre <em>Réglages › Relier nos téléphones › Inviter</em> et envoie le code de 6 lettres. L'autre touche <em>J'ai un code de mon partenaire</em> sur l'écran d'accueil.</p>
-<h3>Faut-il payer tous les deux ?</h3>
-<p>Non. Un seul abonnement débloque Magpie Premium pour le couple. Pour le gérer ou le résilier : Réglages de l'iPhone › votre nom › Abonnements.</p>
-<h3>Comment supprimer mes données ?</h3>
-<p><em>Réglages › Supprimer mon compte et mes données</em> efface tout, sur votre téléphone et sur nos serveurs.</p>
-<h3>Contact</h3>
-<p><a href="mailto:magpie.app.contact@gmail.com">magpie.app.contact@gmail.com</a></p>
-</section>
+  <section class="features">
+    <div class="feature"><div class="emoji">💗</div><h3>Thinking of you</h3><p>One tap, even from the home screen widget, and their phone lights up with your thought.</p></div>
+    <div class="feature"><div class="emoji">🥚</div><h3>An egg only you two share</h3><p>It takes about nine months to hatch. Its colors come from what you share. Then raise your little creature together.</p></div>
+    <div class="feature"><div class="emoji">🎨</div><h3>Draw on their home screen</h3><p>Doodle or write a word: it appears on your partner's widget.</p></div>
+    <div class="feature"><div class="emoji">💌</div><h3>Open-when letters</h3><p>"Open when you miss me", "Open on your birthday"… Sealed until they need it.</p></div>
+    <div class="feature"><div class="emoji">❓</div><h3>Question of the day</h3><p>You only see their answer once you've answered too.</p></div>
+    <div class="feature"><div class="emoji">📸</div><h3>Your story, kept forever</h3><p>Memories, a shared photo album, every reunion and the kilometers you travelled for love.</p></div>
+    <div class="feature"><div class="emoji">⏳</div><h3>Countdown & time zones</h3><p>Days until you see each other, and whether they're awake or probably asleep.</p></div>
+    <div class="feature"><div class="emoji">🎬</div><h3>Your story in a video</h3><p>A ready-to-post vertical video of your love story, for TikTok and Instagram.</p></div>
+  </section>
 
-<section class="card" id="pl">
-<h2>Pomoc</h2>
-<h3>Jak połączyć nasze telefony?</h3>
-<p>Jedno z Was otwiera <em>Ustawienia › Połącz nasze telefony › Zaproś</em> i wysyła 6-literowy kod. Drugie stuka <em>Mam kod od partnera</em> na ekranie powitalnym.</p>
-<h3>Czy oboje musimy płacić?</h3>
-<p>Nie. Jedna subskrypcja odblokowuje Magpie Premium dla pary. Zarządzasz nią w ustawieniach konta Apple (Ustawienia › Twoje imię › Subskrypcje).</p>
-<h3>Jak usunąć moje dane?</h3>
-<p><em>Ustawienia › Usuń moje konto i dane</em> usuwa wszystko z telefonu i z naszych serwerów.</p>
-<h3>Kontakt</h3>
-<p><a href="mailto:magpie.app.contact@gmail.com">magpie.app.contact@gmail.com</a></p>
-</section>
+  <section class="price">
+    <h2>Free, with one Premium for both of you</h2>
+    <p class="muted">Only one of you subscribes: your partner gets it too. No ads, no tracking, delete everything anytime.</p>
+    <p class="muted">English · Français · Polski · Español · Português · Deutsch · Italiano · 日本語 · 한국어 · 中文</p>
+  </section>
+
+  <footer>
+    <a href="help.html">Help</a> · <a href="privacy.html">Privacy</a> · <a href="mailto:magpie.app.contact@gmail.com">Contact</a>
+  </footer>
 </main>
 </body>
 </html>
