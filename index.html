@@ -100,6 +100,13 @@
 // Adds the email to the Magpie waitlist (Supabase). The public key can only insert, never read the list.
 const SUPABASE = "https://crdvxemnurfwjvztpykg.supabase.co";
 const KEY = "sb_publishable_69IFvjjlGMx-WmCalLf8LA_6fEjCQSe";
+// Where the visitor came from: ?src=tiktok, ?src=ig… (links in each bio), remembered while browsing the site.
+const SOURCE = (() => {
+  const clean = (v) => (v && /^[a-z0-9_-]{1,30}$/.test(v) ? v : null);
+  const fromUrl = clean(new URLSearchParams(location.search).get("src"));
+  try { if (fromUrl) sessionStorage.setItem("magpie-src", fromUrl); return fromUrl || clean(sessionStorage.getItem("magpie-src")); }
+  catch { return fromUrl; }
+})();
 document.getElementById("waitlist").addEventListener("submit", async (event) => {
   event.preventDefault();
   const status = document.getElementById("status");
@@ -114,6 +121,7 @@ document.getElementById("waitlist").addEventListener("submit", async (event) => 
         email: document.getElementById("email").value.trim().toLowerCase(),
         platform: document.getElementById("platform").value,
         lang: (navigator.language || "").slice(0, 10),
+        ...(SOURCE ? { source: SOURCE } : {}),
       }),
     });
     // 409 = already on the list: same happy message.

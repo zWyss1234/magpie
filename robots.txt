@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://zwyss1234.github.io/magpie/sitemap.xml
